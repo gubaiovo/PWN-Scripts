@@ -49,7 +49,7 @@ copy_and_run() {
     if cp "$0" "$target_dir/$new_name"; then
         chmod +x "$target_dir/$new_name"
         echo "在 $target_dir/$new_name 中启动新实例"
-        (cd "$target_dir" && "./$new_name" &)
+        (cd "$target_dir" && setsid "./$new_name" &)
     else
         echo "copy $target_dir/$new_name failed"
         return 1
